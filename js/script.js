@@ -1,19 +1,17 @@
 var pagina = document.querySelector('main')
 var botonMenuHamburguesa = document.getElementById('botonMenuHamburguesa')
 var menuHamburguesa = document.getElementById('menuHamburguesa')
-var imagen1 = "images/svg/Hamburguesa cerrada.svg"
-var imagen2 = "images/svg/Hamburguesa abierta.svg"
 var contadorImagen = 0;
 
 botonMenuHamburguesa.addEventListener('click', function () {
     menuHamburguesa.classList.toggle("menuHamburguesaAbierto");
     if (contadorImagen == 0) {
-        botonMenuHamburguesa.src = imagen2;
+        botonMenuHamburguesa.classList.toggle('botonInvertido');
         contadorImagen = 1;
         pagina.style.paddingLeft = '60px'
     }
     else {
-        botonMenuHamburguesa.src = imagen1;
+        botonMenuHamburguesa.classList.toggle('botonInvertido');
         contadorImagen = 0;
         pagina.style.paddingLeft = '0'
     }
